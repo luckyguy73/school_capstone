@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load plotly_dash %}
+{% block content %}
+    <h1>Histograms and Correlation Heatmap</h1>
+    <div class="card mb-5" style="height: 100%; width: 100%">
+        <img class="" src="{% static 'img/plot/histogram_chart.png' %}" alt="">
+        <img class="" src="{% static 'img/plot/heatmap.png' %}" alt="">
+    </div>
+{% endblock %}

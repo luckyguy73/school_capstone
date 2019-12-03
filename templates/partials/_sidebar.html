@@ -1,0 +1,68 @@
+{% load static %}
+<!-- Sidebar -->
+<ul class="navbar-nav bg-gray-900 sidebar sidebar-dark accordion toggled" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'home' %}">
+        {#        <div class="sidebar-brand-icon rotate-n-15">#}
+        {#            <i class="fas fa-laugh-wink"></i>#}
+        {#        </div>#}
+        <img class="ml-2" src="{% static 'img/favicon.ico' %}" alt="logo" height="32" width="32">
+
+{#        <div class="sidebar-brand-text mx-3">Belle Moda</div>#}
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Interface
+    </div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'table' %}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>DataSet</span>
+        </a>
+        <a class="nav-link" href="{% url 'chart' %}" >
+            <i class="fas fa-fw fa-chart-line"></i>
+            <span>Charts</span>
+        </a>
+        <a class="nav-link" href="{% url 'graph' %}">
+            <i class="fas fa-fw fa-chart-bar"></i>
+            <span>Graphs</span>
+        </a>
+        <a class="nav-link" href="{% url 'tree' %}">
+            <i class="fas fa-fw fa-tree"></i>
+            <span>Decision Tree</span>
+        </a>
+        <a class="nav-link" href="{% url 'pie' %}" >
+            <i class="fas fa-fw fa-chart-pie"></i>
+            <span>Pie Chart</span>
+        </a>
+    </li>
+
+    <!-- Nav Item - Utilities Collapse Menu -->
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
+    <!-- Sidebar Toggler (Sidebar) -->
+{#    <div class="text-center d-none d-md-inline">#}
+{#        <button class="rounded-circle border-0" id="sidebarToggle"></button>#}
+{#    </div>#}
+
+</ul>
+<!-- End of Sidebar -->

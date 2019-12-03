@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load plotly_dash %}
+{% block content %}
+    <h1>Age Frequency Graph - Target 1 has Heart Disease</h1>
+    <div class="card mb-2" style="height: 100%; width: 100%">
+        <img class="m-5" src="{% static 'img/plot/age_frequency.png' %}" alt="">
+    </div>
+    <h1>Heart Disease Bar Graph and Scatter Plot</h1>
+    <div class="card mb-5 d-inline" style="height: 100%; width: 100%">
+            <img class="m-5" src="{% static 'img/plot/count.png' %}" alt="">
+            <img class="m-5" src="{% static 'img/plot/scatter.png' %}" alt="">
+    </div>
+{% endblock %}

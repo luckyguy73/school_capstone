@@ -1,0 +1,50 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="{% static 'img/favicon.ico' %}" rel="icon" type="image/x-icon">
+    <title>Login to Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/sb-admin-2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="col-md-4 offset-md-4 mt-5 mx-auto">
+            <div class="brand border-top">
+                <img class="ml-2" src="{% static 'img/favicon.ico' %}" alt="logo" height="32" width="32">
+                <span class="ml-2">Belle Moda Dashboard</span>
+            </div>
+            <form method="post" action="{% url 'login' %}">
+                <div class="login-wrapper border-bottom">
+
+                    {% if form.errors %}
+                        <p>Your username and password didn't match. Please try again.</p>
+                    {% endif %}
+
+
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ form.username }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.password }}
+                    </div>
+                    <input type="hidden" name="next" value="{{ next }}"/>
+                </div>
+                <input class="btn btn-info" type="submit" value="Login"/>
+            </form>
+        </div>
+    </div>
+
+    <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static "js/login.js" %}"></script>
+
+</body>
+</html>

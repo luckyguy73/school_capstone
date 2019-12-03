@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load plotly_dash %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <h1>Test Results</h1>
+        </div>
+        <div class="row mb-4">
+            <div class="card" style="width: 100%; height: 100%">
+                <div class="card-body">
+                    <h3>Classification Prediction</h3>
+                    <p>The following results were based on the data input below. <br>
+                    {% if prediction == 0 %}
+                        <h4 class="text-success">Heart Disease Not Likely</h4>
+                    {% else %}
+                        <h4 class="text-danger">Heart Disease Likely</h4>
+                    {% endif %}
+                    </p>
+                    <div>
+                        Input Data:
+                    </div>
+                    <ul>
+                        {% for k, v in form.items %}
+                            <li>{{ k }}: {{ v }}</li>
+                        {% endfor %}
+                    </ul>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

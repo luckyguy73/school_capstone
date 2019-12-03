@@ -1,0 +1,29 @@
+body {
+    background-color: #343a40;
+}
+.brand {
+    padding: 20px;
+    margin-top: 140px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.border-top {
+    border-top: 1px solid #6c757d !important;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #6c757d !important;
+}
+
+.login-wrapper {
+    padding: 20px;
+}
+
+.form-group input {
+    width: 100%;
+}
+
+.btn {
+    margin: 20px;
+}

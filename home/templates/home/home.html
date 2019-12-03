@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load plotly_dash %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <h1 class="col-sm-4">Dashboard</h1>
+        </div>
+
+        <div class="row">
+            <div class="card mb-5">
+                <div class="card-body">
+                    <div class="text-muted">Hover titles for description</div>
+                    <hr>
+                    <form method="post" action="{% url 'result' %}">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="form-group col-md-1">
+                                <label for="age" title="Age in years" data-toggle="tooltip" data-placement="top">Age</label>
+                                <input type="number" class="form-control" id="age" placeholder="Age" value="50"
+                                       name="age">
+                            </div>
+                            <div class="form-group col-md-1">
+                                <label for="sex" title="Select patient's gender" data-toggle="tooltip"
+                                       data-placement="top">Gender</label>
+                                <select id="sex" class="form-control" name="sex">
+                                    <option selected value="1">Male</option>
+                                    <option value="2">Female</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="cp" title="Type of chest pain" data-toggle="tooltip"
+                                       data-placement="top">Chest Pain</label>
+                                <select id="cp" class="form-control" name="cp">
+                                    <option selected value="1">Typical Angina</option>
+                                    <option value="2">Atypical Angina</option>
+                                    <option value="3">Non-Anginal Pain</option>
+                                    <option value="4">Asymptomatic</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-1">
+                                <label for="trestbps" title="Resting blood pressure in mm Hg" data-toggle="tooltip"
+                                       data-placement="top">BP</label>
+                                <input type="number" class="form-control" id="trestbps" placeholder="BP"
+                                       value="130" name="trestbps">
+                            </div>
+                            <div class="form-group col-md-1">
+                                <label for="chol" title="Serum cholesterol in mg/dl" data-toggle="tooltip"
+                                       data-placement="top">Chol</label>
+                                <input type="number" class="form-control" id="chol" placeholder="Chol"
+                                       value="245" name="chol">
+                            </div>
+                            <div class="form-group col-md-1">
+                                <label for="fbs" title="Fasting Blood Sugar > 120 mg/dl" data-toggle="tooltip"
+                                       data-placement="top">FBS</label>
+                                <select id="fbs" class="form-control" name="fbs">
+                                    <option selected value="1">True</option>
+                                    <option value="0">False</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="restecg" title="Resting electrocardiographic results" data-toggle="tooltip"
+                                       data-placement="top">ECG Results</label>
+                                <select id="restecg" class="form-control" name="restecg">
+                                    <option selected value="0">Normal</option>
+                                    <option value="1">ST-T wave abnormality</option>
+                                    <option value="2">Left ventricular hypertrophy</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="form-row mt-2">
+                            <div class="form-group col-md-1">
+                                <label for="thalach" title="Maximum heart rate achieved" data-toggle="tooltip"
+                                       data-placement="top">Max HR</label>
+                                <input type="number" class="form-control" id="thalach" placeholder="HR"
+                                       value="150" name="thalach">
+                            </div>
+                            <div class="form-group col-md-1">
+                                <label for="exang" title="Exercise induced angina" data-toggle="tooltip"
+                                       data-placement="top">EIA</label>
+                                <select id="exang" class="form-control" name="exang">
+                                    <option selected value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-1">
+                                <label for="oldpeak"
+                                       title="ST depression induced by exercise relative to rest (ST relates to positions on the ECG plot)"
+                                       data-toggle="tooltip" data-placement="top">
+                                    ST Depr</label>
+                                <input type="number" class="form-control" id="oldpeak" placeholder="ST"
+                                       value="0.8" step="0.1" name="oldpeak">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="slope" title="The slope of the peak exercise ST segment"
+                                       data-toggle="tooltip" data-placement="top">Slope</label>
+                                <select id="slope" class="form-control" name="slope">
+                                    <option selected value="2">Flat</option>
+                                    <option value="1">Upsloping</option>
+                                    <option value="3">Downsloping</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="ca" title="The number of major vessels colored by fluoroscopy"
+                                       data-toggle="tooltip" data-placement="top">Major
+                                    Vessels</label>
+                                <select id="ca" class="form-control" name="ca">
+                                    <option selected value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="thal" title="The result of the thallium stress test" data-toggle="tooltip"
+                                       data-placement="top">Thallium Stress
+                                    Test</label>
+                                <select id="thal" class="form-control" name="thal">
+                                    <option selected value="3">Normal</option>
+                                    <option value="6">Fixed defect</option>
+                                    <option value="7">Reversible defect</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="mt-4 btn btn-info">Run Model Prediction</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

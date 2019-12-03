@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load plotly_dash %}
+{% block content %}
+    <h1>Random Forest Classifier Decision Tree Image</h1>
+    <div class="card mb-5" style="height: 100%; width: 100%">
+        <img class="m-5" src="{% static 'img/plot/tree.png' %}" alt="">
+    </div>
+{% endblock %}
