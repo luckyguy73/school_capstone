@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="286d7ea7-bb85-4c68-83e9-8a75bf5798ce" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plotly_dash/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/plotly_dash/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +102,7 @@
       <workItem from="1574882841281" duration="21739000" />
       <workItem from="1575154501707" duration="11352000" />
       <workItem from="1575329469002" duration="20636000" />
-      <workItem from="1575413536446" duration="655000" />
+      <workItem from="1575413536446" duration="741000" />
     </task>
     <servers />
   </component>
