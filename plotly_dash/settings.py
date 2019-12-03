@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'ii=i_*a+h6=u5&x8ktlmo83@g9_s0$
 
 DEBUG = os.environ.get('DJANGO_DEBUG', True)
 
-ALLOWED_HOSTS = ['polar-lowlands-45955.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['idebie.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
