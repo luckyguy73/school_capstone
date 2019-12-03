@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load plotly_dash %}
+{% block title %}DataSet | {% endblock %}
 {% block content %}
     <h1>DataSet to Run Interactive Queries</h1>
         <div class="{% plotly_class name='SimpleExample' %} card" style="height: 100%; width: 100%">
