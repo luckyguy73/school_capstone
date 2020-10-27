@@ -14,7 +14,7 @@ chardet==3.0.4
 Click==7.0
 colorlover==0.3.0
 constantly==15.1.0
-cryptography==2.8
+cryptography==3.2
 cycler==0.10.0
 daphne==2.4.0
 dash==1.6.1
