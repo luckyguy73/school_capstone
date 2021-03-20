@@ -32,7 +32,7 @@ django-plotly-dash==1.1.1
 django-redis==4.10.0
 django-rest-framework==0.1.0
 django-widget-tweaks==1.4.5
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 dpd-components==0.1.0
 eli5==0.10.1
 Flask==1.1.1
