@@ -25,7 +25,7 @@ dash-table==4.5.1
 decorator==4.4.1
 defusedxml==0.6.0
 dj-database-url==0.5.0
-Django==2.2.7
+Django==2.2.22
 django-allauth==0.40.0
 django-crispy-forms==1.8.1
 django-plotly-dash==1.1.1
